@@ -1,0 +1,215 @@
+/* BODY */
+body {
+	margin: 0%; /* This ensures our site displays all the way to the edge of the browser screen */
+}
+
+/* Navbar */
+.dropbtn {
+    font-weight: 1000;
+    overflow: hidden;
+    position: fixed;
+    top: 0;
+    z-index: 1;
+    background-color: black;
+    color: white;
+    padding: 18px;
+    font-size: 18px;
+    border: none;
+    cursor: pointer;
+  }
+
+  .nav-dropdown {
+    position: fixed;
+    display: inline-block;
+    z-index: 1;
+    top: 53px;
+  }
+  
+  .dropdown-content {
+    
+    display: none;
+    position: absolute;
+    background-color: #a1a1a1;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+  }
+  
+  .dropdown-content a {
+    font-weight: 700;
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+  }
+  
+  .dropdown-content a:hover {background-color: #f1f1f1}
+  
+  .nav-dropdown:hover .dropdown-content {
+    display: block;
+  }
+  
+/* Video */
+#Typing_Video {
+	position: fixed; /* This fixes our video to the page  */
+	right: 0; /* This ensures no space between the edge of the video and the edge of the page */
+	bottom: 0; /* This ensures no space between the edge of the video and the edge of the page */
+	min-width: 100%; /* This ensures the video is displayed across the full width of the page */
+	z-index: -1;
+}
+
+/* Text over the video */ 
+.Video_Text { 
+	background: rgba(0, 0, 0, 0.5); /* This provides a semi-transparent background for the text to sit over */
+	color: white; 
+	width: 100%;
+	padding: 20px; /* This adds padding around the text so that the background goes slightly beyond the text */
+	margin-top: 23%;
+}
+
+.Video_Text h1 {
+    color: #66fcf1;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.Video_Text q {
+    font-size: 30px;
+}
+
+
+/* Table - this section covers the styling of the columns and rows within our table */
+* { /* The asterisk is a universal selector that applies this effect to all elements on the page */
+	box-sizing: border-box; /* This creates a box with a border within which we will place most of our text */
+}
+
+.Column_1 {
+	float: left;  
+	width: 50%; /* This ensures one column takes up half the page width */
+	padding: 10px; 
+	padding-top: 2%; /* This ensures there is space between the top of the column and our headings */
+	height: 400px; /* This sets the height of our column at 400 pixels - if you change the text within the columns, you will need to adjust the column heights accordingly */
+	background-color:#66fcf1; 
+}
+
+.Column_2 {
+	float: left;
+	width: 50%;
+	padding: 10px;
+	padding-top: 1.9%;
+	height: 400px;
+	background-color: #1f2833;
+}
+
+.Column_3 {
+	float: left;
+	width: 50%;
+	padding: 10px;
+	padding-top: 2%;
+	height: 400px;
+	background-color: #1f2833;
+}
+
+.Row:after { /* This inserts something after the content of selected elements */
+	content: ""; /* By leaving this blank, we are allowing the footer (covered lower down) to be displayed - removing it makes the footer overwrite a column */
+	display: table; /* The display property specifies the type of display behavior; the table value tells the browser to treat the element as a table */
+	clear: both; /* This clears any other elements from floating on the left or the right of an element */
+}
+
+/* Heading 1 elements */
+h1 {
+	font-family: Georgia, 'Times New Roman', Times, serif;
+	text-align: center;
+	margin-top: 2%; /* We are adding a small margin above the headings */
+	color: #000000;
+}
+
+/* Paragraph elements */
+p {
+	font-family: Verdana, Geneva, Tahoma, sans-serif;
+	text-align: justify;
+	letter-spacing: 1px; /* This expands the text slightly */
+	font-size: 15px;
+	padding-left: 20px;
+	padding-right: 20px;
+}
+
+/* Center align elements - this embraces all centered text */
+center {
+	text-align: center;
+	letter-spacing: 1px;
+    font-size: 18px;
+	padding-left: 20px;
+	padding-right: 20px;
+}
+
+/* Anchor elements */
+a {
+	color: blue; /* We are ensuring all links are blue */
+}
+
+/* Image elements */
+img {
+	filter: grayscale(75%); /* This rids our pictures of 75% of their color */
+    border-radius: 8px; /* This causes our images to have slightly rounded edges */
+    max-width: 100%; 
+    height: 340px; 
+	margin-left: auto; /* This in combination with margin-right: auto centers our images */
+    margin-right: auto;
+	display: block;	/* By specifying block display we can ensure our images are able to be centered */
+}
+
+/* Contact form */
+input[type=text] { /* This covers the input sections of the contact form */
+	width: 100%;
+	padding: 12px;
+    border: 1px solid #ccc; /* We are setting a solid border and its colors */
+    border-radius: 4px; 
+    box-sizing: border-box;
+    margin-top: 6px;
+    margin-bottom: 16px;
+    resize: vertical; /* This specifies how an element is resized; vertical allows the user to resize the height of the element */
+    font-family: Perpetua, Rockwell Extra Bold; 
+}
+
+/* Submit button */
+input[type=submit] { /* This covers the submit button for the contact form */
+	background-color: black;
+	color: white;
+	font-weight: bold;
+	padding: 12px 20px;
+	border: none;
+	border-radius: 4px;
+	cursor: pointer;
+	display: block;
+	margin-left: auto;
+	margin-right: auto; 
+	font-family: Perpetua, Rockwell Extra Bold;
+}
+
+/* Hover effect for submit button */
+input[type=submit]:hover {
+	background-color: white; /* Makes the background turn white when hovered over */
+	color: black; /* Makes the font turn black when hovered over */
+	font-weight: bold; /* Makes the font bold when hovered over */
+	transform: scale(1.1); /* Makes the button increase 1.5 times in size */ 
+	transition: transform 1s; /* Makes the transform effect last 1.5 seconds from start to finish */
+}
+
+/* Form elememt */
+form {
+    font-family: "Trebuchet MS", Optima;
+    font-weight: bold;
+}
+
+/* Image element hover effects */
+img:hover {
+	filter: grayscale(5%);  /* Brings back most of the image's color when hovered over */
+    transition: transform 1s;
+	transform: scale(1.1);
+}
+
+/* Footer element */
+footer {
+	padding: 10px;
+	background-color:white;
+}
